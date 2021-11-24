@@ -65,3 +65,28 @@ function addNum(x: number, y: number): number {
 function log(message: string | number): void {
     console.log(message)
 }
+
+// Interfaces (i.e. specific structure to an object or function)
+
+interface UserInterface {
+    // read only property
+    readonly id: number,
+    name: string
+    // "?" signifies optional property
+    age?: number
+}
+
+const user1: UserInterface = {
+    id: 1,
+    name: 'Jordan',
+}
+
+// type Point = number | string 
+// const p1: Point = 1
+
+interface MathFunc {
+    (x: number, y: number): number
+}
+
+const add: MathFunc = (x: number, y: number): number => x + y;
+const sub: MathFunc = (x: number, y: number): number => x - y;
