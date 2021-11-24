@@ -58,3 +58,27 @@ const user1 = {
 };
 const add = (x, y) => x + y;
 const sub = (x, y) => x - y;
+// Classes
+// Implement person class with PersonInterface
+class Person {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return `${this.name} is now registered`;
+    }
+}
+// Subclasses
+class Employee extends Person {
+    constructor(id, name, position) {
+        // call in "id" and "name" from Person class
+        super(id, name);
+        this.position = position;
+    }
+}
+const emp = new Employee(3, 'Shawn', 'Developer');
+const mike = new Person(2, "Mike");
+const jordan = new Person(1, 'Jordan');
+console.log(emp.name);
+console.log(emp.register());

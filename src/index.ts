@@ -90,3 +90,49 @@ interface MathFunc {
 
 const add: MathFunc = (x: number, y: number): number => x + y;
 const sub: MathFunc = (x: number, y: number): number => x - y;
+
+interface PersonInterface {
+    id: number,
+    name: string,
+    register(): string
+}
+
+// Classes
+// Implement person class with PersonInterface
+class Person implements PersonInterface{
+    // public by default
+    // add private to only access property in class
+    // private id: number
+    // protected means only accessible in class and extended from class
+    id: number
+    name: string
+
+    constructor(id: number, name: string) {
+        this.id = id
+        this.name = name
+    }
+
+    register() {
+        return `${this.name} is now registered`
+    }
+}
+
+// Subclasses
+class Employee extends Person {
+    position: string
+
+    constructor(id: number, name: string, position: string) {
+        // call in "id" and "name" from Person class
+        super(id, name)
+        this.position = position
+    }
+}
+
+const emp = new Employee(3, 'Shawn', 'Developer')
+
+
+const mike = new Person(2, "Mike");
+const jordan = new Person(1, 'Jordan');
+
+console.log(emp.name);
+console.log(emp.register())
