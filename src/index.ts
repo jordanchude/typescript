@@ -40,4 +40,28 @@ enum Direction2 {
     Right = "Right"
 }
 
-console.log(Direction2)
+// Objects
+type User = {
+    id: number,
+    name: string
+}
+
+const user: User = {
+    id: 1,
+    name: 'Jordan'
+}
+
+// Type Assertion
+let cid: any = 1;
+// let customerId = <number>cid
+let customerId = cid as number;
+
+// FUNCTIONS
+//  x, y, and return are all numbers
+function addNum(x: number, y: number): number {
+    return x + y;
+}
+
+function log(message: string | number): void {
+    console.log(message)
+}

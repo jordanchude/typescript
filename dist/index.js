@@ -36,4 +36,19 @@ var Direction2;
     Direction2["Left"] = "Left";
     Direction2["Right"] = "Right";
 })(Direction2 || (Direction2 = {}));
-console.log(Direction2);
+const user = {
+    id: 1,
+    name: 'Jordan'
+};
+// Type Assertion
+let cid = 1;
+// let customerId = <number>cid
+let customerId = cid;
+// FUNCTIONS
+//  x, y, and return are all numbers
+function addNum(x, y) {
+    return x + y;
+}
+function log(message) {
+    console.log(message);
+}
