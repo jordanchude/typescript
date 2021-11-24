@@ -134,5 +134,14 @@ const emp = new Employee(3, 'Shawn', 'Developer')
 const mike = new Person(2, "Mike");
 const jordan = new Person(1, 'Jordan');
 
-console.log(emp.name);
-console.log(emp.register())
+// GENERICS
+// Used to build reusable components
+// Instead of any, use generic "T" as placeholder of type
+function getArray<T>(items: T[]): T[] {
+    return new Array().concat(items);
+}
+
+let numArray = getArray<number>([1,2,3,4]);
+let strArray = getArray<string>(["jordan", "emily", "daniel"]);
+
+strArray.push('hello');
