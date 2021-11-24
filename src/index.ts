@@ -21,3 +21,23 @@ employee = [
 ]
 
 // Union (Variables to Hold More Than One Type)
+let pid: string | number;
+pid = '22'
+
+// Enum [Numbers] (Define Set of Named Constants)
+enum Direction1 {
+    Up = 1,
+    Down,
+    Left,
+    Right
+}
+
+// Enum [Numbers] (Define Set of Named Constants)
+enum Direction2 {
+    Up = "Up",
+    Down = "Down",
+    Left = "Left",
+    Right = "Right"
+}
+
+console.log(Direction2)
